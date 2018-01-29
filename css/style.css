@@ -1,0 +1,63 @@
+
+body{
+    background: black;
+}
+
+div{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: white;
+    display: inline-block;
+}
+
+.eat1{
+    position: relative;
+    left: 860px;
+    top: 100px;
+    animation-name: eat1;
+    animation-duration: 10s;
+}
+
+.eat2{
+    position: relative;
+    left: 400px;
+    top: 380px;
+    animation-name: eat2;
+    animation-duration: 10s;
+}
+
+img{
+    display: inline-block;
+    width: 50px;
+    position: relative;
+    top: 30px;
+    animation-name: pacman;
+    animation-duration: 10s;
+    animation-timing-function: linear ;
+    z-index: 1;
+}
+  
+@keyframes pacman{
+    0%{left:0;}
+    30%{left:900px; top:0; transform: rotate(0deg)}
+    31%{transform: rotate(90deg)}
+    50%{left:900px; top:400px; transform: rotate(90deg)}
+    51%{transform: rotate(180deg)}
+    85%{left:300px; top:400px; transform: rotate(180deg)}
+    95%{left:0; top:400px;transform: rotate(180deg)}
+    100%{left:0;top:0; transform: rotate(270deg)}
+
+}
+
+@keyframes eat1 {
+    35%{left: 860px; top: 100px;opacity: 1}
+    36%{opacity: 0}
+    100%{opacity: 0}
+}
+
+@keyframes eat2 {
+    75%{left: 400px; top: 380px;opacity: 1}
+    76%{opacity: 0}
+    100%{opacity: 0}
+}
